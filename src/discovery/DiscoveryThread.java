@@ -39,6 +39,7 @@ public class DiscoveryThread implements Runnable{
 
             // flavor text
             System.out.println("Sent REQ to IP "+ IPAddress.getHostAddress());
+            sendingSocket.leaveGroup(IPAddress);
         } catch (Exception e){
             e.printStackTrace();
         }
