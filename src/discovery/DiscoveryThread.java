@@ -15,11 +15,14 @@ public class DiscoveryThread implements Runnable{
         ByteBuffer buffer = ByteBuffer.allocate(2048);
 
         // send request
-        try (DatagramSocket sendingSocket = new DatagramSocket()){
+        try (MulticastSocket sendingSocket = new MulticastSocket(Config.Discover_port)){
 
             // get destination data
             InetAddress IPAddress = Config.Broadcast_address;
             int port = Config.Discover_port;
+
+            // join group
+            sendingSocket.joinGroup(IPAddress);
 
             // Build new message
             msg.setMessage(Config.REQ);
@@ -29,10 +32,6 @@ public class DiscoveryThread implements Runnable{
             oos.writeObject(msg);
             oos.flush();
             byte[] Buf= baos.toByteArray();
-
-            for(byte b:Buf){
-                System.out.println(b);
-            }
 
             // send packet
             DatagramPacket packet = new DatagramPacket(Buf, Buf.length, IPAddress, port);

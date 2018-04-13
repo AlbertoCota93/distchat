@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16691b5d-cdc9-4e80-88fd-96238580bf86" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/application/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/controllers/TextFieldController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/controllers/TextFieldController$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/controllers/TextFieldController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/discovery/DiscoveryThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/discovery/DiscoveryThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/discovery/AnswerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/discovery/AnswerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/discovery/DiscoveryThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/discovery/DiscoveryThread.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -31,8 +29,17 @@
       <file leaf-file-name="DiscoveryThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/discovery/DiscoveryThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="210">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnswerThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/discovery/AnswerThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -63,6 +70,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/discovery/AnswerThread.java" />
         <option value="$PROJECT_DIR$/src/discovery/DiscoveryThread.java" />
       </list>
     </option>
@@ -213,12 +221,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523649007911</updated>
       <workItem from="1523649022868" duration="769000" />
-      <workItem from="1523650140338" duration="1959000" />
+      <workItem from="1523650140338" duration="3032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2728000" />
+    <option name="totallyTimeSpent" value="3801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -232,7 +240,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1687898" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25159237" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12664714" />
@@ -293,10 +301,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/discovery/AnswerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/discovery/DiscoveryThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="210">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>

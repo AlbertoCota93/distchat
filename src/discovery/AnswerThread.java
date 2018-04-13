@@ -17,7 +17,7 @@ public class AnswerThread implements Runnable {
         System.out.println("checking for new requests");
 
         // reusable variables
-        byte[] incomingData = new byte[1024];
+        byte[] incomingData = new byte[2048];
         DiscoveryMessage msg = new DiscoveryMessage((byte) -1,'Z');
 
         try (MulticastSocket socket = new MulticastSocket(Config.Discover_port)){
