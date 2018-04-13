@@ -12,7 +12,7 @@ public class DiscoveryThread implements Runnable{
         System.out.println("Sending REQ");
         DiscoveryMessage msg = new DiscoveryMessage();
         InetSocketAddress is_msg = null;
-        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        ByteBuffer buffer = ByteBuffer.allocate(2048);
 
         // send request
         try (DatagramSocket sendingSocket = new DatagramSocket()){
@@ -29,6 +29,10 @@ public class DiscoveryThread implements Runnable{
             oos.writeObject(msg);
             oos.flush();
             byte[] Buf= baos.toByteArray();
+
+            for(byte b:Buf){
+                System.out.println(b);
+            }
 
             // send packet
             DatagramPacket packet = new DatagramPacket(Buf, Buf.length, IPAddress, port);
@@ -57,7 +61,7 @@ public class DiscoveryThread implements Runnable{
                 if(is_msg == null) continue;
 
                 // flavor text
-                System.out.println("Got a message");
+                System.out.println("Got a message from "+is_msg.getAddress().toString());
 
                 // rebuild message
                 ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(buffer.array()));
