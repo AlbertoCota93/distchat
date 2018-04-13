@@ -1,4 +1,4 @@
-package mx.com.ITESO.discovery;
+package discovery;
 
 import java.io.Serializable;
 import java.net.InetAddress;

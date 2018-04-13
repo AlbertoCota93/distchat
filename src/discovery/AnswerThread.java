@@ -1,4 +1,4 @@
-package mx.com.ITESO.discovery;
+package discovery;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -21,7 +21,7 @@ public class AnswerThread implements Runnable {
         DiscoveryMessage msg = new DiscoveryMessage((byte) -1,'Z');
 
         try (MulticastSocket socket = new MulticastSocket(Config.Discover_port)){
-            socket.joinGroup(Config.Discover_address);
+            socket.joinGroup(Config.Broadcast_address);
             // receive requests
             while(!Config.stop_program){
 

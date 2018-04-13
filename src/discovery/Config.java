@@ -1,4 +1,4 @@
-package mx.com.ITESO.discovery;
+package discovery;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -18,14 +18,16 @@ public class Config {
     public static int My_port = 9191;
 
     public static InetAddress My_address;
-    public static InetAddress Discover_address;
+    public static InetAddress Broadcast_address;
+    public static InetAddress Message_address;
 
 
 
     static {
         try {
             My_address = InetAddress.getLocalHost();
-            Discover_address = InetAddress.getByName("230.0.0.0");
+            Broadcast_address = InetAddress.getByName("230.0.0.0");
+            Message_address = InetAddress.getByName("230.0.0.1");
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }

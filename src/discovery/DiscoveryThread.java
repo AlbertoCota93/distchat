@@ -1,4 +1,4 @@
-package mx.com.ITESO.discovery;
+package discovery;
 
 import java.io.*;
 import java.net.*;
@@ -18,7 +18,7 @@ public class DiscoveryThread implements Runnable{
         try (DatagramSocket sendingSocket = new DatagramSocket()){
 
             // get destination data
-            InetAddress IPAddress = Config.Discover_address;
+            InetAddress IPAddress = Config.Broadcast_address;
             int port = Config.Discover_port;
 
             // Build new message
