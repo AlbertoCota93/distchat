@@ -3,6 +3,8 @@ package controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import discovery.*;
+
 import javafx.event.EventHandler;
 import javafx.fxml.*;
 import javafx.scene.control.Button;
@@ -32,7 +34,8 @@ public class TextFieldController implements Initializable {
 		@Override
 		public void handle(MouseEvent m) {
 			// TODO Auto-generated method stub
-			System.out.println(m.getClickCount());
+			DiscoveryThread dt = new DiscoveryThread();
+			dt.run();
 		}
 
 	};

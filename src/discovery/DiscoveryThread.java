@@ -93,11 +93,11 @@ public class DiscoveryThread implements Runnable{
         } catch (Exception e){
             e.printStackTrace();
         }
-
+        System.out.println("My id is" + Config.My_ID + " :D");
         (new Thread(new AnswerThread())).start();
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         (new Thread(new DiscoveryThread())).start();
-    }
+    }*/
 }
