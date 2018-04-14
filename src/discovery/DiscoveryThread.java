@@ -64,7 +64,6 @@ public class DiscoveryThread implements Runnable{
                 buffer.clear();
                 is_msg = (InetSocketAddress) channel.receive(buffer);
                 buffer.flip();
-                System.out.println("Despues del buffer");
                 if(is_msg == null) continue;
 
                 // flavor text
