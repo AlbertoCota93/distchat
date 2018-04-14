@@ -4,6 +4,9 @@ import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.util.Iterator;
 
 public class DiscoveryThread implements Runnable{
 
@@ -49,16 +52,25 @@ public class DiscoveryThread implements Runnable{
             channel.bind(new InetSocketAddress(Config.My_address,Config.My_port));
             channel.configureBlocking(false);
 
+            Selector selector = Selector.open();
+            channel.register(selector,SelectionKey.OP_READ,null);
+            selector.select();
+
             // flavor text
             System.out.println("anyone out there? I'm "+Config.My_address.getHostAddress()+" port: "+Config.My_port);
 
+            int i;
+            Iterator<SelectionKey> selectionKeyIterator;
+
             // retry MAX_CICLES times to receive answers
-            for(int i = 0; i<Config.MAX_CICLES; i++){
+            for(i = 0, selectionKeyIterator = selector.selectedKeys().iterator(); i<Config.MAX_CICLES && selectionKeyIterator.hasNext(); i++){
 
                 // receive from channel
+                selectionKeyIterator.next();
                 buffer.clear();
                 is_msg = (InetSocketAddress) channel.receive(buffer);
                 buffer.flip();
+                selectionKeyIterator.remove();
                 if(is_msg == null) continue;
 
                 // flavor text
@@ -99,7 +111,7 @@ public class DiscoveryThread implements Runnable{
         } catch (Exception e){
             e.printStackTrace();
         }
-        System.out.println("My id is" + Config.My_ID + " :D");
+        System.out.println("My id is " + Config.My_ID + " :D");
         (new Thread(new AnswerThread())).start();
     }
 
