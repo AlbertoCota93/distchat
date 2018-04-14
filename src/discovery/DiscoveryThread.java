@@ -111,6 +111,8 @@ public class DiscoveryThread implements Runnable{
                     }
                 }
             }
+
+            selector.close();
         } catch (Exception e){
             e.printStackTrace();
         }

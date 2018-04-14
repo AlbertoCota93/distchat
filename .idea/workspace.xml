@@ -24,8 +24,8 @@
       <file leaf-file-name="DiscoveryThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/discovery/DiscoveryThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
+            <state relative-caret-position="171">
+              <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -67,6 +67,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>despues</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -229,15 +234,16 @@
       <workItem from="1523650140338" duration="5123000" />
       <workItem from="1523724746169" duration="8838000" />
       <workItem from="1523736229327" duration="524000" />
-      <workItem from="1523737264715" duration="820000" />
+      <workItem from="1523737264715" duration="1841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16074000" />
+    <option name="totallyTimeSpent" value="17095000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1366" height="738" extended-state="6" />
+    <frame x="683" y="30" width="683" height="738" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -247,10 +253,10 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25159237" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35665914" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3280255" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.063689604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12737921" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -455,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/discovery/DiscoveryThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
+        <state relative-caret-position="171">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="30" />
         </state>
       </provider>
     </entry>
