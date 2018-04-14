@@ -52,26 +52,19 @@ public class DiscoveryThread implements Runnable{
             channel.bind(new InetSocketAddress(Config.My_address,Config.My_port));
             channel.configureBlocking(false);
 
-            //Selector selector = Selector.open();
-
-            //channel.register(selector,SelectionKey.OP_READ,null);
-            //selector.select();
-
             // flavor text
             System.out.println("anyone out there? I'm "+Config.My_address.getHostAddress()+" port: "+Config.My_port);
 
-            int i;
-            /*Iterator<SelectionKey> selectionKeyIterator;*/
 
             // retry MAX_CICLES times to receive answers
-            for(i = 0/*, selectionKeyIterator = selector.selectedKeys().iterator()*/; i<Config.MAX_CICLES /*&& selectionKeyIterator.hasNext()*/; i++){
-                Thread.sleep(10);
+            for(int i = 0; i<Config.MAX_CICLES; i++){
+
+
                 // receive from channel
-                /*selectionKeyIterator.next();*/
                 buffer.clear();
                 is_msg = (InetSocketAddress) channel.receive(buffer);
                 buffer.flip();
-                /*selectionKeyIterator.remove();*/
+                System.out.println("Despues del buffer");
                 if(is_msg == null) continue;
 
                 // flavor text
