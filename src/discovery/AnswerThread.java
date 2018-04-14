@@ -52,7 +52,7 @@ public class AnswerThread implements Runnable {
                 System.out.println("Sending ACK");
 
                 // send answer
-                try (DatagramSocket sendingSocket = new DatagramSocket()){
+                try (DatagramSocket sendingSocket = new DatagramSocket(Config.My_port)){
 
                     // get destination data
                     InetAddress IPAddress = incomingPacket.getAddress();
