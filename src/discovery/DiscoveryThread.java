@@ -52,9 +52,10 @@ public class DiscoveryThread implements Runnable{
             channel.bind(new InetSocketAddress(Config.My_address,Config.My_port));
             channel.configureBlocking(false);
 
-            Selector selector = Selector.open();
-            channel.register(selector,SelectionKey.OP_READ,null);
-            selector.select();
+            //Selector selector = Selector.open();
+
+            //channel.register(selector,SelectionKey.OP_READ,null);
+            //selector.select();
 
             // flavor text
             System.out.println("anyone out there? I'm "+Config.My_address.getHostAddress()+" port: "+Config.My_port);

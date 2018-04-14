@@ -8,7 +8,7 @@ public class Config {
     public static final char REQ = 'R';
     public static final char ACK = 'A';
 
-    public static final int MAX_CICLES = 5000000;
+    public static final int MAX_CICLES = 5000;
 
 
     public static boolean stop_program = false;
