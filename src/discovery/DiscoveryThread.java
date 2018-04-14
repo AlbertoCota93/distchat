@@ -59,8 +59,6 @@ public class DiscoveryThread implements Runnable{
 
             // retry MAX_CICLES times to receive answers
             for(int i = 0; i<Config.MAX_CICLES; i++){
-                Thread.sleep(10);
-
                 // receive from channel
                 buffer.clear();
                 is_msg = (InetSocketAddress) channel.receive(buffer);
