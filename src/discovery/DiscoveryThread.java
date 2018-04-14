@@ -60,17 +60,17 @@ public class DiscoveryThread implements Runnable{
             System.out.println("anyone out there? I'm "+Config.My_address.getHostAddress()+" port: "+Config.My_port);
 
             int i;
-            Iterator<SelectionKey> selectionKeyIterator;
+            /*Iterator<SelectionKey> selectionKeyIterator;*/
 
             // retry MAX_CICLES times to receive answers
-            for(i = 0, selectionKeyIterator = selector.selectedKeys().iterator(); i<Config.MAX_CICLES && selectionKeyIterator.hasNext(); i++){
-
+            for(i = 0/*, selectionKeyIterator = selector.selectedKeys().iterator()*/; i<Config.MAX_CICLES /*&& selectionKeyIterator.hasNext()*/; i++){
+                Thread.sleep(10);
                 // receive from channel
-                selectionKeyIterator.next();
+                /*selectionKeyIterator.next();*/
                 buffer.clear();
                 is_msg = (InetSocketAddress) channel.receive(buffer);
                 buffer.flip();
-                selectionKeyIterator.remove();
+                /*selectionKeyIterator.remove();*/
                 if(is_msg == null) continue;
 
                 // flavor text
