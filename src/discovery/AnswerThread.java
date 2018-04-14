@@ -56,7 +56,7 @@ public class AnswerThread implements Runnable {
 
                     // get destination data
                     InetAddress IPAddress = incomingPacket.getAddress();
-                    int port = incomingPacket.getPort();
+                    int port = Config.My_port;
 
                     // Build new message
                     msg.setMessage(Config.ACK);
