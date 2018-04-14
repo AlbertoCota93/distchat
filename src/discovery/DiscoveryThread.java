@@ -8,6 +8,8 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.util.Iterator;
 
+import static java.nio.channels.SelectionKey.OP_READ;
+
 public class DiscoveryThread implements Runnable{
 
     @Override
@@ -52,18 +54,26 @@ public class DiscoveryThread implements Runnable{
             channel.bind(new InetSocketAddress(Config.My_address,Config.My_port));
             channel.configureBlocking(false);
 
+            Selector selector = Selector.open();
+            channel.register(selector,OP_READ,null);
+
             // flavor text
             System.out.println("anyone out there? I'm "+Config.My_address.getHostAddress()+" port: "+Config.My_port);
 
+            selector.select();
+            Iterator<SelectionKey> selectionKeyIterator = selector.selectedKeys().iterator();
 
             // retry MAX_CICLES times to receive answers
-            for(int i = 0; i<Config.MAX_CICLES; i++){
+            for(int i = 0; i<Config.MAX_CICLES && selectionKeyIterator.hasNext(); i++){
 
+                SelectionKey selectionKey = selectionKeyIterator.next();
 
                 // receive from channel
                 buffer.clear();
                 is_msg = (InetSocketAddress) channel.receive(buffer);
                 buffer.flip();
+
+                selectionKeyIterator.remove();
                 if(is_msg == null) continue;
 
                 // flavor text
