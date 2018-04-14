@@ -25,7 +25,7 @@ public class Config {
 
     static {
         try {
-            My_address = InetAddress.getLocalHost();
+            My_address = InetAddress.getByName(InetAddress.getLocalHost().getHostAddress());
             Broadcast_address = InetAddress.getByName("230.0.0.0");
             Message_address = InetAddress.getByName("230.0.0.1");
         } catch (UnknownHostException e) {

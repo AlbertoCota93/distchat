@@ -50,7 +50,7 @@ public class DiscoveryThread implements Runnable{
             channel.configureBlocking(false);
 
             // flavor text
-            System.out.println("anyone out there? I'm "+Config.My_address+" port: "+Config.My_port);
+            System.out.println("anyone out there? I'm "+Config.My_address.getHostAddress()+" port: "+Config.My_port);
 
             // retry MAX_CICLES times to receive answers
             for(int i = 0; i<Config.MAX_CICLES; i++){
