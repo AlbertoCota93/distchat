@@ -72,7 +72,7 @@ public class AnswerThread implements Runnable {
                     sendingSocket.send(packet);
 
                     // flavor text
-                    System.out.println("Sent ACK to IP "+ IPAddress.getHostAddress());
+                    System.out.println("Sent ACK to IP "+ IPAddress.getHostAddress() + "port: "+port);
                 } catch (Exception e){
                     e.printStackTrace();
                 }
