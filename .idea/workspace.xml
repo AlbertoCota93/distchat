@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16691b5d-cdc9-4e80-88fd-96238580bf86" name="Default" comment="" />
+    <list default="true" id="16691b5d-cdc9-4e80-88fd-96238580bf86" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/discovery/DiscoveryThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/discovery/DiscoveryThread.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,20 +23,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiscoveryThread.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DiscoveryThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/discovery/DiscoveryThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="52" column="90" selection-start-line="52" selection-start-column="90" selection-end-line="52" selection-end-column="90" />
+            <state relative-caret-position="150">
+              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/discovery/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="27" column="92" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
+            <state relative-caret-position="353">
+              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -74,9 +76,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/discovery/DiscoveryThread.java" />
-        <option value="$PROJECT_DIR$/src/discovery/Config.java" />
         <option value="$PROJECT_DIR$/src/discovery/AnswerThread.java" />
+        <option value="$PROJECT_DIR$/src/discovery/Config.java" />
+        <option value="$PROJECT_DIR$/src/discovery/DiscoveryThread.java" />
       </list>
     </option>
   </component>
@@ -89,9 +91,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="683" />
     <option name="y" value="30" />
-    <option name="width" value="1366" />
+    <option name="width" value="683" />
     <option name="height" value="738" />
   </component>
   <component name="ProjectView">
@@ -226,15 +229,15 @@
       <updated>1523649007911</updated>
       <workItem from="1523649022868" duration="769000" />
       <workItem from="1523650140338" duration="5123000" />
-      <workItem from="1523724746169" duration="4277000" />
+      <workItem from="1523724746169" duration="5434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10169000" />
+    <option name="totallyTimeSpent" value="11326000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1366" height="738" extended-state="6" />
+    <frame x="683" y="30" width="683" height="738" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -248,7 +251,7 @@
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25159237" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32961783" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15885799" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12737921" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -341,13 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/discovery/DiscoveryThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="52" column="90" selection-start-line="52" selection-start-column="90" selection-end-line="52" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/discovery/AnswerThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -357,8 +353,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/discovery/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="27" column="92" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
+        <state relative-caret-position="353">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/discovery/DiscoveryThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
         </state>
       </provider>
     </entry>

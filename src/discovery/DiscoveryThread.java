@@ -56,12 +56,14 @@ public class DiscoveryThread implements Runnable{
             for(int i = 0; i<Config.MAX_CICLES; i++){
 
                 // receive from channel
+                buffer.clear();
                 is_msg = (InetSocketAddress) channel.receive(buffer);
                 buffer.flip();
                 if(is_msg == null) continue;
 
                 // flavor text
                 System.out.println("Got a message from "+is_msg.getAddress().toString());
+
 
                 // rebuild message
                 ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(buffer.array()));
