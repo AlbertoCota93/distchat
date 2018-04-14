@@ -64,7 +64,7 @@ public class DiscoveryThread implements Runnable{
             Iterator<SelectionKey> selectionKeyIterator = selector.selectedKeys().iterator();
 
             // retry MAX_CICLES times to receive answers
-            for(int i = 0; i<Config.MAX_CICLES && selectionKeyIterator.hasNext(); i++){
+            for(int i = 0; i<Config.MAX_CICLES || selectionKeyIterator.hasNext(); i++){
 
                 SelectionKey selectionKey = selectionKeyIterator.next();
 
