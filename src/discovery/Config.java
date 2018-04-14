@@ -1,5 +1,6 @@
 package discovery;
 
+import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -25,7 +26,12 @@ public class Config {
 
     static {
         try {
-            My_address = InetAddress.getByName(InetAddress.getLocalHost().getHostAddress());
+            try(final DatagramSocket socket = new DatagramSocket()){
+                socket.connect(InetAddress.getByName("8.8.8.8"), 10002);
+                My_address = InetAddress.getByName(socket.getLocalAddress().getHostAddress());
+            } catch (Exception e1){
+                e1.printStackTrace();
+            }
             Broadcast_address = InetAddress.getByName("230.0.0.0");
             Message_address = InetAddress.getByName("230.0.0.1");
         } catch (UnknownHostException e) {
