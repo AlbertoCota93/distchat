@@ -25,6 +25,7 @@ public class AnswerThread implements Runnable {
             // receive requests
             while(!Config.stop_program){
 
+
                 // read message
                 DatagramPacket incomingPacket = new DatagramPacket(incomingData,incomingData.length);
                 socket.receive(incomingPacket);
@@ -45,7 +46,7 @@ public class AnswerThread implements Runnable {
                 }
 
                 // confirm msg is a request, if not, skip
-                if(msg.getMessage() != Config.REQ || msg.getSender_ID() == Config.My_ID) continue;
+                if(msg.getMessage() != Config.REQ /*|| msg.getSender_ID() == Config.My_ID*/) continue;
 
                 // flavor text
                 System.out.println("Sending ACK");
